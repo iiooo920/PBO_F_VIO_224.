@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
-class LoginSystem {
+class LoginSystem { //deklarasi kelas
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Pilih Jenis Login:");
+        System.out.println("Pilih Jenis Login:"); //menampilkan menu login
         System.out.println("1. Admin");
         System.out.println("2. Mahasiswa");
         System.out.print("Masukkan pilihan (1/2): ");
         int pilihan = scanner.nextInt();
         scanner.nextLine();
 
-        if (pilihan == 1) {
+        if (pilihan == 1) { //memilih pilihan
 
             System.out.print("Masukkan Username: ");
             String username = scanner.nextLine();
@@ -20,6 +20,8 @@ class LoginSystem {
 
             if (username.equals("Admin10") && password.equals("Password210")) {
                 System.out.println("Login Admin berhasil!");
+                System.out.println("Nama: " + username);
+                System.out.println("NIM: " + password);
             } else {
                 System.out.println("Login gagal! Username atau password salah.");
             }
@@ -42,6 +44,6 @@ class LoginSystem {
             System.out.println("Pilihan tidak valid.");
         }
 
-        scanner.close();
+        scanner.close(); //penutup
     }
 }
